@@ -1,0 +1,7 @@
+resource "aws_route53_record" "www" {
+  zone_id = "aws_route53_zone.primary.Zy0968831C5870CHDISNQ"
+  name    = "glasier.ml"
+  type    = "A"
+  ttl     = 300
+  records = [aws_elb.Greenalytics_elb.dns_name]
+}
